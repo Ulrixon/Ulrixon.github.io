@@ -1,0 +1,163 @@
+%% Cheng-Shun (Ryan) Chuang — CV / PhD Application Resume
+%% Compile with: pdflatex resume.tex
+\documentclass[10pt,letterpaper]{article}
+
+%% ── Packages ─────────────────────────────────────────────────────────────────
+\usepackage[margin=0.55in, top=0.45in, bottom=0.45in]{geometry}
+\usepackage[hidelinks]{hyperref}
+\usepackage{enumitem}
+\usepackage{titlesec}
+\usepackage{xcolor}
+\usepackage{fontenc}
+\usepackage{inputenc}
+\usepackage{microtype}
+\usepackage{parskip}
+\usepackage{tabularx}
+\usepackage{array}
+\usepackage{setspace}
+
+%% ── Colors ───────────────────────────────────────────────────────────────────
+\definecolor{accent}{HTML}{2563EB}
+\definecolor{muted}{HTML}{6B7280}
+
+%% ── Typography ───────────────────────────────────────────────────────────────
+\pagestyle{empty}
+\setlength{\parindent}{0pt}
+\setlength{\parskip}{0pt}
+\setstretch{1.0}
+
+%% Section headings
+\titleformat{\section}
+  {\normalsize\bfseries\color{accent}}
+  {}{0em}{\MakeUppercase}
+  [\color{accent}\titlerule]
+\titlespacing{\section}{0pt}{7pt}{3pt}
+
+%% ── Helpers ──────────────────────────────────────────────────────────────────
+\newcommand{\resumeItem}[1]{\item\small #1}
+
+\newcommand{\entryHeader}[4]{%
+  \begin{tabularx}{\linewidth}{@{}Xr@{}}
+    \textbf{#1} \textit{\small\color{muted}#2} & \textit{\small\color{muted}#3} \\
+    \multicolumn{2}{@{}l@{}}{\small #4}
+  \end{tabularx}
+  \vspace{1pt}
+}
+
+\newcommand{\entryHeaderSingle}[3]{%
+  \begin{tabularx}{\linewidth}{@{}Xr@{}}
+    \textbf{#1} & \textit{\small\color{muted}#2} \\
+    \multicolumn{2}{@{}l@{}}{\small\textit{\color{muted}#3}}
+  \end{tabularx}
+  \vspace{1pt}
+}
+
+%% ── Document ─────────────────────────────────────────────────────────────────
+\begin{document}
+
+%% ── Header ───────────────────────────────────────────────────────────────────
+\begin{center}
+  {\LARGE\bfseries CHUANG, CHENG-SHUN (RYAN)}\\[5pt]
+  \small
+  \href{mailto:ryan70235@gmail.com}{ryan70235@gmail.com}
+  \enspace\textbullet\enspace
+  +1\,(571)\,331-6196
+  \enspace\textbullet\enspace
+  \href{https://ulrixon.github.io}{ulrixon.github.io}
+  \enspace\textbullet\enspace
+  \href{https://github.com/Ulrixon}{github.com/Ulrixon}
+\end{center}
+\vspace{2pt}
+
+%% ── Education ────────────────────────────────────────────────────────────────
+\section{Education}
+
+\entryHeader{Virginia Tech}{\ ·\ Alexandria, VA, USA}
+            {Jan.~2025 -- Jan.~2027 (Expected)}
+            {Master of Engineering in Computer Science}
+\begin{itemize}[leftmargin=1.5em, itemsep=1pt, topsep=3pt]
+  \resumeItem{GPA: 4.0/4.0}
+  \resumeItem{Completed: Machine Learning, NLP, AI Tools for Software Engineering, Mobile Application Development, Ethics \& Professionalism in CS, Advanced Topics in Data \& Information Systems}
+  \resumeItem{\textit{In Progress (Spr.~2026):} User Interface Software, Advanced Topics in Systems, Verification \& Validation of Scientific Computing, Research \& Thesis}
+\end{itemize}
+\vspace{3pt}
+
+\entryHeader{National Taipei University (NTPU)}{\ ·\ New Taipei City, Taiwan}
+            {Sep.~2019 -- June~2024}
+            {Bachelor of Arts in Economics}
+\begin{itemize}[leftmargin=1.5em, itemsep=1pt, topsep=3pt]
+  \resumeItem{Overall GPA: 3.95/4.0 \,|\, Last 60 credits: 4.0/4.0 \,|\, CS Courses: 4.0/4.0}
+  \resumeItem{Coursework: OS, Databases, ANN \& Deep Learning, Computer Vision}
+  \resumeItem{Awards: Academic Excellence (3$\times$), Falcon Award, Dean's Award}
+\end{itemize}
+\vspace{3pt}
+
+\entryHeader{University of California, Riverside}{\ ·\ Riverside, CA, USA}
+            {Sep.~2023 -- Dec.~2023}
+            {Exchange Student — GPA: 4.0/4.0 \,|\, Data Structures \& Algorithms, Discrete Structures, Software Construction}
+
+%% ── Publications ─────────────────────────────────────────────────────────────
+\section{Publications}
+
+\begin{itemize}[leftmargin=1.5em, itemsep=5pt, topsep=3pt]
+  \resumeItem{Chuang, C.-S.\ et al.\ \textbf{Impact of Linear Dimensionality Reduction on Machine Learning
+    Performance: A Case Study on Fashion-MNIST.}
+    \textit{Computing Conference 2026}, In Press.
+    [\textit{Main Author}]
+    Benchmarked PCA, LDA, Factor Analysis, and Random Forest feature selection; SVM+PCA achieved
+    top accuracy of 0.8995.}
+
+  \resumeItem{[Co-Author] \textbf{Design of a Low-Cost, High-Resolution Underwater Acoustic Imager with
+    Integrated Deep Learning Enhancement.}
+    \textit{IEEE Sensors Journal}, 2025.
+    Integrated a lightweight U-Net (${\sim}$1M params) achieving 7--9$\times$ axial and
+    2--3$\times$ lateral resolution improvement over baseline ASAI.}
+\end{itemize}
+
+%% ── Research Projects ────────────────────────────────────────────────────────
+\section{Research Projects}
+
+\entryHeaderSingle{Virginia Tech Transportation Safety Index (VTTSI)}{Sep.~2025 -- Dec.~2025}
+                  {Python · Empirical Bayes · MCDM (CRITIC/SAW/EDAS/CODAS) · FastAPI · Streamlit · GCP}
+\begin{itemize}[leftmargin=1.5em, itemsep=1pt, topsep=3pt]
+  \resumeItem{Developed a real-time road safety scoring system (0--100) integrating VDOT crash history
+    with connected-vehicle telemetry at 15-minute resolution.}
+  \resumeItem{Applied Empirical Bayes crash modeling with uplift factors (speed deficit, VRU conflicts)
+    and a CRITIC-weighted hybrid MCDM framework (SAW--EDAS--CODAS) for multi-criteria ranking.}
+\end{itemize}
+\vspace{3pt}
+
+\entryHeaderSingle{Taiwanese Car Plate Recognition}{May~2023 -- June~2023}
+                  {Python · YOLOv8 · Computer Vision · Object Detection}
+\begin{itemize}[leftmargin=1.5em, itemsep=1pt, topsep=3pt]
+  \resumeItem{Trained YOLOv8 models to recognize Taiwanese license plates from moving-vehicle video;
+    achieved \textbf{mAP@IoU\,=\,0.5 of 0.986} (detection) and 0.966 (OCR), with zero errors in
+    static parking-lot scenarios.}
+\end{itemize}
+
+%% ── Experience ───────────────────────────────────────────────────────────────
+\section{Experience}
+
+\entryHeaderSingle{TVBS News --- QA Engineer Intern}{Jan.~2024 -- June~2024}
+                  {Taipei, Taiwan}
+\begin{itemize}[leftmargin=1.5em, itemsep=1pt, topsep=3pt]
+  \resumeItem{Ensured mobile app quality through systematic bug identification and regression testing.}
+  \resumeItem{Built and tested RESTful APIs using MVC architecture, improving data retrieval speed and stability.}
+\end{itemize}
+\vspace{3pt}
+
+\entryHeader{ROC Army --- Military Police}{\ ·\ Taiwan}
+            {Jul.~2024 -- Oct.~2024}
+            {Completed mandatory conscript service; built discipline, adaptability, and cross-functional teamwork.}
+
+%% ── Technical Skills ─────────────────────────────────────────────────────────
+\section{Technical Skills}
+
+\begin{tabularx}{\linewidth}{@{}>{\bfseries\small}lX@{}}
+  Languages   & \small Python, C++, SQL, JavaScript \\[4pt]
+  ML / DL     & \small PyTorch, TensorFlow, Keras, scikit-learn, YOLOv8, U-Net \\[4pt]
+  Engineering & \small FastAPI, SQLAlchemy, Streamlit, Docker, GCP, GitHub Actions, Linux, WSL2 \\[4pt]
+  Databases   & \small MySQL, PostgreSQL, Cloud SQL \\
+\end{tabularx}
+
+\end{document}

@@ -1,0 +1,356 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Cheng-Shun (Ryan) Chuang</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css" />
+
+</head>
+<body>
+
+<!-- NAV -->
+<nav>
+  <a href="index.html" class="nav-logo">&lt;Ryan /&gt;</a>
+  <ul class="nav-links">
+    <li><a href="#about">About</a></li>
+    <li><a href="#education">Education</a></li>
+    <li><a href="#experience">Experience</a></li>
+    <li><a href="#skills">Skills</a></li>
+    <li class="nav-dropdown">
+      <a href="projects.html" class="nav-link-main">Projects ▾</a>
+      <ul class="dropdown-menu">
+        <li><a href="projects.html#featured">Featured Projects</a></li>
+        <li><a href="projects.html#repos">GitHub Repos</a></li>
+      </ul>
+    </li>
+    <li><a href="publications.html">Publications</a></li>
+    <li><a href="#contact">Contact</a></li>
+  </ul>
+  <button class="nav-mobile-btn" aria-label="Toggle menu" onclick="this.closest('nav').querySelector('.nav-links').classList.toggle('open')">
+    <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M3 18h18v-2H3v2zm0-5h18v-2H3v2zm0-7v2h18V6H3z"/></svg>
+  </button>
+</nav>
+
+<!-- HERO -->
+<section id="hero">
+  <div class="container">
+    <div class="hero-inner">
+      <img
+        class="hero-avatar"
+        src="https://avatars.githubusercontent.com/u/61776179?v=4"
+        alt="Cheng-Shun Chuang avatar"
+      />
+      <div class="hero-text">
+        <p class="hero-greeting">// Hi there, I'm</p>
+        <h1 class="hero-name">Cheng-Shun <span>(Ryan)</span> Chuang</h1>
+        <p class="hero-tagline">
+          MEng Computer Science @ Virginia Tech · AI/ML Researcher · Computer Vision &amp; Systems Engineer
+        </p>
+        <div class="hero-links">
+          <a href="Resume_CHENG-SHUN_CHUANG.pdf" class="btn btn-primary" target="_blank">
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8l-6-6zm4 18H6V4h7v5h5v11zM8 15h8v2H8zm0-4h8v2H8z"/></svg>
+            Resume
+          </a>
+          <a href="https://github.com/Ulrixon" class="btn btn-outline" target="_blank">
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M12 0C5.37 0 0 5.37 0 12c0 5.3 3.44 9.8 8.21 11.39.6.11.82-.26.82-.58v-2.03c-3.34.73-4.04-1.61-4.04-1.61-.55-1.39-1.34-1.76-1.34-1.76-1.09-.75.08-.73.08-.73 1.21.08 1.85 1.24 1.85 1.24 1.07 1.84 2.81 1.31 3.5 1 .11-.78.42-1.31.76-1.61-2.67-.3-5.47-1.33-5.47-5.93 0-1.31.47-2.38 1.24-3.22-.12-.3-.54-1.52.12-3.18 0 0 1.01-.32 3.3 1.23a11.5 11.5 0 0 1 3-.4c1.02.004 2.04.138 3 .4 2.28-1.55 3.29-1.23 3.29-1.23.66 1.66.24 2.88.12 3.18.77.84 1.23 1.91 1.23 3.22 0 4.61-2.81 5.63-5.48 5.92.43.37.81 1.1.81 2.22v3.29c0 .32.21.7.82.58C20.56 21.8 24 17.3 24 12c0-6.63-5.37-12-12-12z"/></svg>
+            GitHub
+          </a>
+          <a href="mailto:ryan70235@gmail.com" class="btn btn-outline">
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M20 4H4a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h16a2 2 0 0 0 2-2V6a2 2 0 0 0-2-2zm0 4-8 5-8-5V6l8 5 8-5v2z"/></svg>
+            Email
+          </a>
+          <a href="projects.html" class="btn btn-outline">
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M3 3h18v2H3V3zm0 8h18v2H3v-2zm0 8h18v2H3v-2z"/></svg>
+            Projects
+          </a>
+          <a href="publications.html" class="btn btn-outline">
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M19 3H5a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V5a2 2 0 0 0-2-2zm-7 3h2v2h-2V6zm0 4h2v6h-2v-6zM7 6h2v2H7V6zm0 4h2v6H7v-6zm10 6H5v-2h14v2zm0-4h-4v-2h4v2zm0-4h-4V6h4v2z"/></svg>
+            Publications
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- HIGHLIGHTS -->
+<section id="highlights" style="padding:3rem 0;background:var(--surface);border-bottom:1px solid var(--border);">
+  <div class="container">
+    <div class="highlight-grid">
+      <div class="highlight-card">
+        <div class="highlight-icon">🎓</div>
+        <div class="highlight-stat">4.0 / 4.0</div>
+        <div class="highlight-label">GPA at Virginia Tech</div>
+      </div>
+      <div class="highlight-card">
+        <div class="highlight-icon">📝</div>
+        <div class="highlight-stat">2</div>
+        <div class="highlight-label">Publications (IEEE &amp; Computing Conference)</div>
+      </div>
+      <div class="highlight-card">
+        <div class="highlight-icon">🏆</div>
+        <div class="highlight-stat">0.986</div>
+        <div class="highlight-label">mAP@0.5 — Car Plate Recognition</div>
+      </div>
+      <div class="highlight-card">
+        <div class="highlight-icon">⭐</div>
+        <div class="highlight-stat">3×</div>
+        <div class="highlight-label">Academic Excellence Award</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ABOUT -->
+<section id="about">
+  <div class="container">
+    <h2 class="section-title">About Me</h2>
+    <p style="color:var(--muted);max-width:680px;margin-bottom:2rem;font-size:.95rem;">
+      I'm a graduate student in Computer Science at Virginia Tech with a strong background in AI/ML, computer vision, and systems programming. My research spans from deep-learning-based image enhancement for underwater acoustic imagers to real-time transportation safety scoring systems. I'm passionate about building systems that bridge rigorous research and practical engineering.
+    </p>
+    <div class="about-grid">
+      <div>
+        <div class="info-item">
+          <span class="info-icon">
+            <svg width="15" height="15" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5A2.5 2.5 0 1 1 12 6.5a2.5 2.5 0 0 1 0 5z"/></svg>
+          </span>
+          <div>
+            <p class="info-label">Location</p>
+            <p class="info-value">Falls Church, VA, USA</p>
+          </div>
+        </div>
+        <div class="info-item">
+          <span class="info-icon">
+            <svg width="15" height="15" viewBox="0 0 24 24" fill="currentColor"><path d="M20 4H4a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h16a2 2 0 0 0 2-2V6a2 2 0 0 0-2-2zm0 4-8 5-8-5V6l8 5 8-5v2z"/></svg>
+          </span>
+          <div>
+            <p class="info-label">Email</p>
+            <p class="info-value"><a href="mailto:ryan70235@gmail.com" style="color:var(--accent);text-decoration:none;">ryan70235@gmail.com</a></p>
+          </div>
+        </div>
+        <div class="info-item">
+          <span class="info-icon">
+            <svg width="15" height="15" viewBox="0 0 24 24" fill="currentColor"><path d="M6.62 10.79a15.05 15.05 0 0 0 6.59 6.59l2.2-2.2a1 1 0 0 1 1.01-.24c1.12.37 2.33.57 3.58.57a1 1 0 0 1 1 1V20a1 1 0 0 1-1 1C10.29 21 3 13.71 3 4.5a1 1 0 0 1 1-1H8a1 1 0 0 1 1 1c0 1.25.2 2.46.57 3.58a1 1 0 0 1-.24 1.01l-2.21 2.2z"/></svg>
+          </span>
+          <div>
+            <p class="info-label">Phone</p>
+            <p class="info-value">+1 (571) 331-6196</p>
+          </div>
+        </div>
+      </div>
+      <div>
+        <div class="info-item">
+          <span class="info-icon">
+            <svg width="15" height="15" viewBox="0 0 24 24" fill="currentColor"><path d="M12 0C5.37 0 0 5.37 0 12c0 5.3 3.44 9.8 8.21 11.39.6.11.82-.26.82-.58v-2.03c-3.34.73-4.04-1.61-4.04-1.61-.55-1.39-1.34-1.76-1.34-1.76-1.09-.75.08-.73.08-.73 1.21.08 1.85 1.24 1.85 1.24 1.07 1.84 2.81 1.31 3.5 1 .11-.78.42-1.31.76-1.61-2.67-.3-5.47-1.33-5.47-5.93 0-1.31.47-2.38 1.24-3.22-.12-.3-.54-1.52.12-3.18 0 0 1.01-.32 3.3 1.23a11.5 11.5 0 0 1 3-.4c1.02.004 2.04.138 3 .4 2.28-1.55 3.29-1.23 3.29-1.23.66 1.66.24 2.88.12 3.18.77.84 1.23 1.91 1.23 3.22 0 4.61-2.81 5.63-5.48 5.92.43.37.81 1.1.81 2.22v3.29c0 .32.21.7.82.58C20.56 21.8 24 17.3 24 12c0-6.63-5.37-12-12-12z"/></svg>
+          </span>
+          <div>
+            <p class="info-label">GitHub</p>
+            <p class="info-value"><a href="https://github.com/Ulrixon" target="_blank" style="color:var(--accent);text-decoration:none;">github.com/Ulrixon</a></p>
+          </div>
+        </div>
+        <div class="info-item">
+          <span class="info-icon">
+            <svg width="15" height="15" viewBox="0 0 24 24" fill="currentColor"><path d="M5 13.18v4L12 21l7-3.82v-4L12 17l-7-3.82zM12 3 1 9l11 6 9-4.91V17h2V9L12 3z"/></svg>
+          </span>
+          <div>
+            <p class="info-label">Program</p>
+            <p class="info-value">MEng Computer Science @ Virginia Tech</p>
+          </div>
+        </div>
+        <div class="info-item">
+          <span class="info-icon">
+            <svg width="15" height="15" viewBox="0 0 24 24" fill="currentColor"><path d="M19 3H5a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V5a2 2 0 0 0-2-2zm-7 3a3 3 0 1 1 0 6 3 3 0 0 1 0-6zm6 12H6v-.5c0-2 4-3.1 6-3.1s6 1.1 6 3.1V18z"/></svg>
+          </span>
+          <div>
+            <p class="info-label">Status</p>
+            <p class="info-value">Open to opportunities</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- EDUCATION -->
+<section id="education">
+  <div class="container">
+    <h2 class="section-title">Education</h2>
+    <div class="timeline">
+
+      <div class="timeline-item">
+        <div class="timeline-header">
+          <span class="timeline-school">Virginia Tech</span>
+          <span class="timeline-date">Jan 2025 – Jan 2027 (Expected)</span>
+        </div>
+        <p class="timeline-degree">Master of Engineering in Computer Science</p>
+        <p class="timeline-location">📍 Alexandria, VA, USA</p>
+        <ul class="timeline-bullets">
+          <li>GPA: 4.0 / 4.0</li>
+          <li>Coursework: AI Tools for Software Engineering, Mobile Application Development, Machine Learning I, NLP, Ethics &amp; Professionalism</li>
+        </ul>
+      </div>
+
+      <div class="timeline-item">
+        <div class="timeline-header">
+          <span class="timeline-school">National Taipei University (NTPU)</span>
+          <span class="timeline-date">Sep 2019 – Jun 2024</span>
+        </div>
+        <p class="timeline-degree">Bachelor of Arts in Economics</p>
+        <p class="timeline-location">📍 New Taipei City, Taiwan</p>
+        <ul class="timeline-bullets">
+          <li>GPA: 3.95 / 4.0 | Last 60 credits: 4.0 / 4.0 | CS Courses: 4.0 / 4.0</li>
+          <li>Coursework: OS, Databases, ANN &amp; Deep Learning, Computer Vision</li>
+          <li>Awards: Academic Excellence (3×), Falcon Award, Dean's Award</li>
+        </ul>
+      </div>
+
+      <div class="timeline-item">
+        <div class="timeline-header">
+          <span class="timeline-school">University of California, Riverside</span>
+          <span class="timeline-date">Sep 2023 – Dec 2023</span>
+        </div>
+        <p class="timeline-degree">Exchange Student, University Credit Program</p>
+        <p class="timeline-location">📍 Riverside, CA, USA</p>
+        <ul class="timeline-bullets">
+          <li>GPA: 4.0 / 4.0</li>
+          <li>Coursework: Data Structures &amp; Algorithms, Discrete Structures, Software Construction</li>
+        </ul>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- EXPERIENCE -->
+<section id="experience">
+  <div class="container">
+    <h2 class="section-title">Experience</h2>
+
+    <div class="exp-item">
+      <div class="exp-header">
+        <span class="exp-role">QA Engineer Intern</span>
+        <span class="exp-date">Jan 2024 – Jun 2024</span>
+      </div>
+      <p class="exp-company">TVBS News · Taipei, Taiwan</p>
+      <ul class="exp-bullets">
+        <li>Assured the quality of a mobile app and identified bugs across release cycles.</li>
+        <li>Developed and tested APIs for a mobile app using MVC architecture, improving data retrieval speed and stability.</li>
+      </ul>
+    </div>
+
+    <div class="exp-item">
+      <div class="exp-header">
+        <span class="exp-role">Military Police</span>
+        <span class="exp-date">Jul 2024 – Oct 2024</span>
+      </div>
+      <p class="exp-company">ROC Army · Taiwan</p>
+      <ul class="exp-bullets">
+        <li>Completed mandatory military service, developing discipline, adaptability, and teamwork skills.</li>
+      </ul>
+    </div>
+
+  </div>
+</section>
+
+<!-- SKILLS -->
+<section id="skills">
+  <div class="container">
+    <h2 class="section-title">Technical Skills</h2>
+    <div class="skills-grid">
+
+      <div class="skill-row">
+        <span class="skill-label">Languages</span>
+        <div class="tags">
+          <span class="tag">Python</span>
+          <span class="tag">C++</span>
+          <span class="tag">SQL</span>
+          <span class="tag">JavaScript</span>
+        </div>
+      </div>
+
+      <div class="skill-row">
+        <span class="skill-label">ML / Deep Learning</span>
+        <div class="tags">
+          <span class="tag">PyTorch</span>
+          <span class="tag">TensorFlow</span>
+          <span class="tag">Keras</span>
+          <span class="tag">scikit-learn</span>
+          <span class="tag">YOLOv8</span>
+          <span class="tag">U-Net</span>
+        </div>
+      </div>
+
+      <div class="skill-row">
+        <span class="skill-label">Frameworks &amp; APIs</span>
+        <div class="tags">
+          <span class="tag">FastAPI</span>
+          <span class="tag">SQLAlchemy</span>
+          <span class="tag">Streamlit</span>
+        </div>
+      </div>
+
+      <div class="skill-row">
+        <span class="skill-label">Tools &amp; Platforms</span>
+        <div class="tags">
+          <span class="tag">Git</span>
+          <span class="tag">GitHub Actions</span>
+          <span class="tag">CI/CD</span>
+          <span class="tag">Docker</span>
+          <span class="tag">GCP</span>
+          <span class="tag">Linux</span>
+          <span class="tag">WSL2</span>
+        </div>
+      </div>
+
+      <div class="skill-row">
+        <span class="skill-label">Databases</span>
+        <div class="tags">
+          <span class="tag">MySQL</span>
+          <span class="tag">PostgreSQL</span>
+          <span class="tag">Cloud SQL</span>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- CONTACT -->
+<section id="contact">
+  <div class="container">
+    <h2 class="section-title">Contact</h2>
+    <p style="color:var(--muted);margin-bottom:1.5rem;font-size:.93rem;">
+      I'm open to research collaborations, internship opportunities, and full-time roles in ML/AI and software engineering. Feel free to reach out!
+    </p>
+    <div class="contact-links">
+      <a href="mailto:ryan70235@gmail.com" class="contact-link">
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M20 4H4a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h16a2 2 0 0 0 2-2V6a2 2 0 0 0-2-2zm0 4-8 5-8-5V6l8 5 8-5v2z"/></svg>
+        ryan70235@gmail.com
+      </a>
+      <a href="https://github.com/Ulrixon" target="_blank" class="contact-link">
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M12 0C5.37 0 0 5.37 0 12c0 5.3 3.44 9.8 8.21 11.39.6.11.82-.26.82-.58v-2.03c-3.34.73-4.04-1.61-4.04-1.61-.55-1.39-1.34-1.76-1.34-1.76-1.09-.75.08-.73.08-.73 1.21.08 1.85 1.24 1.85 1.24 1.07 1.84 2.81 1.31 3.5 1 .11-.78.42-1.31.76-1.61-2.67-.3-5.47-1.33-5.47-5.93 0-1.31.47-2.38 1.24-3.22-.12-.3-.54-1.52.12-3.18 0 0 1.01-.32 3.3 1.23a11.5 11.5 0 0 1 3-.4c1.02.004 2.04.138 3 .4 2.28-1.55 3.29-1.23 3.29-1.23.66 1.66.24 2.88.12 3.18.77.84 1.23 1.91 1.23 3.22 0 4.61-2.81 5.63-5.48 5.92.43.37.81 1.1.81 2.22v3.29c0 .32.21.7.82.58C20.56 21.8 24 17.3 24 12c0-6.63-5.37-12-12-12z"/></svg>
+        github.com/Ulrixon
+      </a>
+      <a href="tel:+15713316196" class="contact-link">
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M6.62 10.79a15.05 15.05 0 0 0 6.59 6.59l2.2-2.2a1 1 0 0 1 1.01-.24c1.12.37 2.33.57 3.58.57a1 1 0 0 1 1 1V20a1 1 0 0 1-1 1C10.29 21 3 13.71 3 4.5a1 1 0 0 1 1-1H8a1 1 0 0 1 1 1c0 1.25.2 2.46.57 3.58a1 1 0 0 1-.24 1.01l-2.21 2.2z"/></svg>
+        +1 (571) 331-6196
+      </a>
+      <a href="Resume_CHENG-SHUN_CHUANG.pdf" target="_blank" class="contact-link">
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8l-6-6zm4 18H6V4h7v5h5v11zM8 15h8v2H8zm0-4h8v2H8z"/></svg>
+        Download Resume
+      </a>
+    </div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer>
+  <p>© 2026 Cheng-Shun (Ryan) Chuang · Built with ❤️ · <a href="https://github.com/Ulrixon/Ulrixon.github.io" target="_blank" style="color:var(--accent);text-decoration:none;">Source on GitHub</a></p>
+</footer>
+
+</body>
+</html>

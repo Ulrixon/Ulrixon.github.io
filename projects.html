@@ -1,0 +1,259 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Projects — Cheng-Shun (Ryan) Chuang</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+<!-- NAV -->
+<nav>
+  <a href="index.html" class="nav-logo">&lt;Ryan /&gt;</a>
+  <ul class="nav-links">
+    <li><a href="index.html#about">About</a></li>
+    <li><a href="index.html#education">Education</a></li>
+    <li><a href="index.html#experience">Experience</a></li>
+    <li><a href="index.html#skills">Skills</a></li>
+    <li class="nav-dropdown">
+      <a href="projects.html" class="nav-link-main nav-active">Projects ▾</a>
+      <ul class="dropdown-menu">
+        <li><a href="#featured">Featured Projects</a></li>
+        <li><a href="#repos">GitHub Repos</a></li>
+      </ul>
+    </li>
+    <li><a href="publications.html">Publications</a></li>
+    <li><a href="index.html#contact">Contact</a></li>
+  </ul>
+  <button class="nav-mobile-btn" aria-label="Toggle menu" onclick="this.closest('nav').querySelector('.nav-links').classList.toggle('open')">
+    <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M3 18h18v-2H3v2zm0-5h18v-2H3v2zm0-7v2h18V6H3z"/></svg>
+  </button>
+</nav>
+
+<!-- PAGE HEADER -->
+<div class="page-header">
+  <div class="container">
+    <h1>My <span>Projects</span></h1>
+    <p>Featured engineering projects and open-source repositories spanning AI/ML, computer vision, cloud systems, and more.</p>
+  </div>
+</div>
+
+<!-- FEATURED PROJECTS -->
+<section id="featured">
+  <div class="container">
+    <h2 class="section-title">Featured Projects</h2>
+
+    <div class="project-card">
+      <div class="project-header">
+        <span class="project-title">Virginia Tech Transportation Safety Index (VTTSI)</span>
+        <span class="project-date">Sep 2025 – Dec 2025</span>
+      </div>
+      <div class="project-tags">
+        <span class="tag">FastAPI</span>
+        <span class="tag">Streamlit</span>
+        <span class="tag">GCP Cloud Run</span>
+        <span class="tag">Cloud SQL</span>
+        <span class="tag">Empirical Bayes</span>
+        <span class="tag">MCDM</span>
+        <span class="tag">Python</span>
+      </div>
+      <ul class="project-bullets" style="margin-top:.8rem;">
+        <li>Built a real-time safety scoring system generating 0–100 scores every 15 minutes by fusing VDOT crash history with connected-vehicle telemetry.</li>
+        <li>Developed a FastAPI backend and Streamlit frontend, deployed on Google Cloud Run with Cloud SQL for persistent data storage.</li>
+        <li>Implemented Empirical Bayes crash modeling, uplift factors (speed deficit, variance, VRU conflicts), and a CRITIC-weighted hybrid MCDM framework (SAW–EDAS–CODAS) for corridor ranking.</li>
+        <li>Integrated Cloud Scheduler for automated periodic scoring and a monitoring dashboard showing historical trends.</li>
+      </ul>
+      <div style="margin-top:1rem;">
+        <a href="https://github.com/Ulrixon/cs6604-trafficsafety" target="_blank" class="btn btn-outline" style="font-size:.83rem;">
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M12 0C5.37 0 0 5.37 0 12c0 5.3 3.44 9.8 8.21 11.39.6.11.82-.26.82-.58v-2.03c-3.34.73-4.04-1.61-4.04-1.61-.55-1.39-1.34-1.76-1.34-1.76-1.09-.75.08-.73.08-.73 1.21.08 1.85 1.24 1.85 1.24 1.07 1.84 2.81 1.31 3.5 1 .11-.78.42-1.31.76-1.61-2.67-.3-5.47-1.33-5.47-5.93 0-1.31.47-2.38 1.24-3.22-.12-.3-.54-1.52.12-3.18 0 0 1.01-.32 3.3 1.23a11.5 11.5 0 0 1 3-.4c1.02.004 2.04.138 3 .4 2.28-1.55 3.29-1.23 3.29-1.23.66 1.66.24 2.88.12 3.18.77.84 1.23 1.91 1.23 3.22 0 4.61-2.81 5.63-5.48 5.92.43.37.81 1.1.81 2.22v3.29c0 .32.21.7.82.58C20.56 21.8 24 17.3 24 12c0-6.63-5.37-12-12-12z"/></svg>
+          View on GitHub
+        </a>
+      </div>
+    </div>
+
+    <div class="project-card">
+      <div class="project-header">
+        <span class="project-title">Real-Time Taiwanese Car Plate Recognition</span>
+        <span class="project-date">May 2023 – Jun 2023</span>
+      </div>
+      <div class="project-tags">
+        <span class="tag">YOLOv8</span>
+        <span class="tag">Computer Vision</span>
+        <span class="tag">Object Detection</span>
+        <span class="tag">OCR</span>
+        <span class="tag">Python</span>
+      </div>
+      <ul class="project-bullets" style="margin-top:.8rem;">
+        <li>Achieved <strong style="color:var(--accent2);">mAP@IOU=0.5 = 0.986</strong> with YOLOv8s_bbox model and 0.966 with YOLOv8s_ocr from live video of moving vehicles.</li>
+        <li>Zero recognition errors in parking lot scenarios; robust to varied lighting and plate angles.</li>
+        <li>Fine-tuned YOLOv8 on a custom Taiwanese plate dataset, implementing a two-stage pipeline: plate detection then character recognition.</li>
+      </ul>
+      <div style="margin-top:1rem;">
+        <a href="https://github.com/Ulrixon/real-time-taiwanese-car-plate-recognition" target="_blank" class="btn btn-outline" style="font-size:.83rem;">
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M12 0C5.37 0 0 5.37 0 12c0 5.3 3.44 9.8 8.21 11.39.6.11.82-.26.82-.58v-2.03c-3.34.73-4.04-1.61-4.04-1.61-.55-1.39-1.34-1.76-1.34-1.76-1.09-.75.08-.73.08-.73 1.21.08 1.85 1.24 1.85 1.24 1.07 1.84 2.81 1.31 3.5 1 .11-.78.42-1.31.76-1.61-2.67-.3-5.47-1.33-5.47-5.93 0-1.31.47-2.38 1.24-3.22-.12-.3-.54-1.52.12-3.18 0 0 1.01-.32 3.3 1.23a11.5 11.5 0 0 1 3-.4c1.02.004 2.04.138 3 .4 2.28-1.55 3.29-1.23 3.29-1.23.66 1.66.24 2.88.12 3.18.77.84 1.23 1.91 1.23 3.22 0 4.61-2.81 5.63-5.48 5.92.43.37.81 1.1.81 2.22v3.29c0 .32.21.7.82.58C20.56 21.8 24 17.3 24 12c0-6.63-5.37-12-12-12z"/></svg>
+          View on GitHub
+        </a>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<!-- GITHUB REPOS -->
+<section id="repos">
+  <div class="container">
+    <h2 class="section-title">GitHub Repositories</h2>
+    <p style="color:var(--muted);margin-bottom:1.8rem;font-size:.88rem;">Selected public repositories — <a href="https://github.com/Ulrixon?tab=repositories" target="_blank" style="color:var(--accent);text-decoration:none;">view all on GitHub</a></p>
+    <div class="repos-grid">
+
+      <a href="https://github.com/Ulrixon/outback-cxl-numa" target="_blank" class="repo-card">
+        <span class="repo-name">
+          <svg width="13" height="13" viewBox="0 0 16 16" fill="currentColor"><path d="M2 2.5A2.5 2.5 0 0 1 4.5 0h8.75a.75.75 0 0 1 .75.75v12.5a.75.75 0 0 1-.75.75h-2.5a.75.75 0 0 1 0-1.5h1.75v-2h-8a1 1 0 0 0-.714 1.7.75.75 0 1 1-1.072 1.05A2.495 2.495 0 0 1 2 11.5Zm10.5-1h-8a1 1 0 0 0-1 1v6.708A2.486 2.486 0 0 1 4.5 9h8Z"/></svg>
+          outback-cxl-numa
+        </span>
+        <p class="repo-desc">Fast &amp; communication-efficient KV-store index on disaggregated memory; reimplemented on NUMA to simulate a CXL environment.</p>
+        <div class="repo-footer">
+          <span class="repo-lang"><span class="lang-dot" style="background:#f34b7d;"></span>C++</span>
+        </div>
+      </a>
+
+      <a href="https://github.com/Ulrixon/real-time-taiwanese-car-plate-recognition" target="_blank" class="repo-card">
+        <span class="repo-name">
+          <svg width="13" height="13" viewBox="0 0 16 16" fill="currentColor"><path d="M2 2.5A2.5 2.5 0 0 1 4.5 0h8.75a.75.75 0 0 1 .75.75v12.5a.75.75 0 0 1-.75.75h-2.5a.75.75 0 0 1 0-1.5h1.75v-2h-8a1 1 0 0 0-.714 1.7.75.75 0 1 1-1.072 1.05A2.495 2.495 0 0 1 2 11.5Zm10.5-1h-8a1 1 0 0 0-1 1v6.708A2.486 2.486 0 0 1 4.5 9h8Z"/></svg>
+          car-plate-recognition
+        </span>
+        <p class="repo-desc">Real-time Taiwanese car plate recognition from moving-vehicle video using YOLOv8; mAP@0.5 = 0.986.</p>
+        <div class="repo-footer">
+          <span class="repo-lang"><span class="lang-dot" style="background:#3572A5;"></span>Python</span>
+          <span class="repo-stars">
+            <svg width="12" height="12" viewBox="0 0 16 16" fill="currentColor"><path d="M8 .25a.75.75 0 0 1 .673.418l1.882 3.815 4.21.612a.75.75 0 0 1 .416 1.279l-3.046 2.97.719 4.192a.75.75 0 0 1-1.088.791L8 12.347l-3.766 1.98a.75.75 0 0 1-1.088-.79l.72-4.194L.818 6.374a.75.75 0 0 1 .416-1.28l4.21-.611L7.327.668A.75.75 0 0 1 8 .25z"/></svg>
+            3
+          </span>
+        </div>
+      </a>
+
+      <a href="https://github.com/Ulrixon/cs6604-trafficsafety" target="_blank" class="repo-card">
+        <span class="repo-name">
+          <svg width="13" height="13" viewBox="0 0 16 16" fill="currentColor"><path d="M2 2.5A2.5 2.5 0 0 1 4.5 0h8.75a.75.75 0 0 1 .75.75v12.5a.75.75 0 0 1-.75.75h-2.5a.75.75 0 0 1 0-1.5h1.75v-2h-8a1 1 0 0 0-.714 1.7.75.75 0 1 1-1.072 1.05A2.495 2.495 0 0 1 2 11.5Zm10.5-1h-8a1 1 0 0 0-1 1v6.708A2.486 2.486 0 0 1 4.5 9h8Z"/></svg>
+          cs6604-trafficsafety
+        </span>
+        <p class="repo-desc">Virginia Tech Transportation Safety Index — real-time VTTSI scoring system using Empirical Bayes crash modeling, FastAPI &amp; GCP.</p>
+        <div class="repo-footer">
+          <span class="repo-lang"><span class="lang-dot" style="background:#3572A5;"></span>Python</span>
+        </div>
+      </a>
+
+      <a href="https://github.com/Ulrixon/ai_project1-MLP-from-scratch" target="_blank" class="repo-card">
+        <span class="repo-name">
+          <svg width="13" height="13" viewBox="0 0 16 16" fill="currentColor"><path d="M2 2.5A2.5 2.5 0 0 1 4.5 0h8.75a.75.75 0 0 1 .75.75v12.5a.75.75 0 0 1-.75.75h-2.5a.75.75 0 0 1 0-1.5h1.75v-2h-8a1 1 0 0 0-.714 1.7.75.75 0 1 1-1.072 1.05A2.495 2.495 0 0 1 2 11.5Zm10.5-1h-8a1 1 0 0 0-1 1v6.708A2.486 2.486 0 0 1 4.5 9h8Z"/></svg>
+          MLP-from-scratch
+        </span>
+        <p class="repo-desc">Multilayer Perceptron built from scratch in Python — forward/backprop, activation functions, and training loop without frameworks.</p>
+        <div class="repo-footer">
+          <span class="repo-lang"><span class="lang-dot" style="background:#3572A5;"></span>Python</span>
+        </div>
+      </a>
+
+      <a href="https://github.com/Ulrixon/python_ai_project2-Classification" target="_blank" class="repo-card">
+        <span class="repo-name">
+          <svg width="13" height="13" viewBox="0 0 16 16" fill="currentColor"><path d="M2 2.5A2.5 2.5 0 0 1 4.5 0h8.75a.75.75 0 0 1 .75.75v12.5a.75.75 0 0 1-.75.75h-2.5a.75.75 0 0 1 0-1.5h1.75v-2h-8a1 1 0 0 0-.714 1.7.75.75 0 1 1-1.072 1.05A2.495 2.495 0 0 1 2 11.5Zm10.5-1h-8a1 1 0 0 0-1 1v6.708A2.486 2.486 0 0 1 4.5 9h8Z"/></svg>
+          AI Classification
+        </span>
+        <p class="repo-desc">AI classification project exploring multiple classifiers on benchmark datasets with comparative analysis.</p>
+        <div class="repo-footer">
+          <span class="repo-lang"><span class="lang-dot" style="background:#3572A5;"></span>Python</span>
+        </div>
+      </a>
+
+      <a href="https://github.com/Ulrixon/ai_project3-face-detection" target="_blank" class="repo-card">
+        <span class="repo-name">
+          <svg width="13" height="13" viewBox="0 0 16 16" fill="currentColor"><path d="M2 2.5A2.5 2.5 0 0 1 4.5 0h8.75a.75.75 0 0 1 .75.75v12.5a.75.75 0 0 1-.75.75h-2.5a.75.75 0 0 1 0-1.5h1.75v-2h-8a1 1 0 0 0-.714 1.7.75.75 0 1 1-1.072 1.05A2.495 2.495 0 0 1 2 11.5Zm10.5-1h-8a1 1 0 0 0-1 1v6.708A2.486 2.486 0 0 1 4.5 9h8Z"/></svg>
+          face-detection
+        </span>
+        <p class="repo-desc">Face detection AI project using deep learning techniques in Python/Jupyter Notebook.</p>
+        <div class="repo-footer">
+          <span class="repo-lang"><span class="lang-dot" style="background:#DA5B0B;"></span>Jupyter Notebook</span>
+        </div>
+      </a>
+
+      <a href="https://github.com/Ulrixon/ai_project4-unsupervised-classification" target="_blank" class="repo-card">
+        <span class="repo-name">
+          <svg width="13" height="13" viewBox="0 0 16 16" fill="currentColor"><path d="M2 2.5A2.5 2.5 0 0 1 4.5 0h8.75a.75.75 0 0 1 .75.75v12.5a.75.75 0 0 1-.75.75h-2.5a.75.75 0 0 1 0-1.5h1.75v-2h-8a1 1 0 0 0-.714 1.7.75.75 0 1 1-1.072 1.05A2.495 2.495 0 0 1 2 11.5Zm10.5-1h-8a1 1 0 0 0-1 1v6.708A2.486 2.486 0 0 1 4.5 9h8Z"/></svg>
+          unsupervised-classification
+        </span>
+        <p class="repo-desc">Unsupervised learning &amp; clustering project exploring K-means, DBSCAN, and dimensionality reduction.</p>
+        <div class="repo-footer">
+          <span class="repo-lang"><span class="lang-dot" style="background:#3572A5;"></span>Python</span>
+        </div>
+      </a>
+
+      <a href="https://github.com/Ulrixon/image-stitching-project" target="_blank" class="repo-card">
+        <span class="repo-name">
+          <svg width="13" height="13" viewBox="0 0 16 16" fill="currentColor"><path d="M2 2.5A2.5 2.5 0 0 1 4.5 0h8.75a.75.75 0 0 1 .75.75v12.5a.75.75 0 0 1-.75.75h-2.5a.75.75 0 0 1 0-1.5h1.75v-2h-8a1 1 0 0 0-.714 1.7.75.75 0 1 1-1.072 1.05A2.495 2.495 0 0 1 2 11.5Zm10.5-1h-8a1 1 0 0 0-1 1v6.708A2.486 2.486 0 0 1 4.5 9h8Z"/></svg>
+          image-stitching
+        </span>
+        <p class="repo-desc">Computer vision image stitching project — feature matching and homography for panorama construction.</p>
+        <div class="repo-footer">
+          <span class="repo-lang"><span class="lang-dot" style="background:#3572A5;"></span>Python</span>
+        </div>
+      </a>
+
+      <a href="https://github.com/Ulrixon/computer_vision_project1-Histogram-Sharpening-Low-Pass-Filtering" target="_blank" class="repo-card">
+        <span class="repo-name">
+          <svg width="13" height="13" viewBox="0 0 16 16" fill="currentColor"><path d="M2 2.5A2.5 2.5 0 0 1 4.5 0h8.75a.75.75 0 0 1 .75.75v12.5a.75.75 0 0 1-.75.75h-2.5a.75.75 0 0 1 0-1.5h1.75v-2h-8a1 1 0 0 0-.714 1.7.75.75 0 1 1-1.072 1.05A2.495 2.495 0 0 1 2 11.5Zm10.5-1h-8a1 1 0 0 0-1 1v6.708A2.486 2.486 0 0 1 4.5 9h8Z"/></svg>
+          cv-image-processing
+        </span>
+        <p class="repo-desc">Histogram equalization, image sharpening, and low-pass filtering implemented from scratch in Python.</p>
+        <div class="repo-footer">
+          <span class="repo-lang"><span class="lang-dot" style="background:#3572A5;"></span>Python</span>
+        </div>
+      </a>
+
+      <a href="https://github.com/Ulrixon/text-based-rpg" target="_blank" class="repo-card">
+        <span class="repo-name">
+          <svg width="13" height="13" viewBox="0 0 16 16" fill="currentColor"><path d="M2 2.5A2.5 2.5 0 0 1 4.5 0h8.75a.75.75 0 0 1 .75.75v12.5a.75.75 0 0 1-.75.75h-2.5a.75.75 0 0 1 0-1.5h1.75v-2h-8a1 1 0 0 0-.714 1.7.75.75 0 1 1-1.072 1.05A2.495 2.495 0 0 1 2 11.5Zm10.5-1h-8a1 1 0 0 0-1 1v6.708A2.486 2.486 0 0 1 4.5 9h8Z"/></svg>
+          text-based-rpg
+        </span>
+        <p class="repo-desc">Object-oriented text-based RPG game in C++ demonstrating design patterns and game mechanics.</p>
+        <div class="repo-footer">
+          <span class="repo-lang"><span class="lang-dot" style="background:#f34b7d;"></span>C++</span>
+        </div>
+      </a>
+
+      <a href="https://github.com/Ulrixon/CS010C-Data-Structures-and-algorithms" target="_blank" class="repo-card">
+        <span class="repo-name">
+          <svg width="13" height="13" viewBox="0 0 16 16" fill="currentColor"><path d="M2 2.5A2.5 2.5 0 0 1 4.5 0h8.75a.75.75 0 0 1 .75.75v12.5a.75.75 0 0 1-.75.75h-2.5a.75.75 0 0 1 0-1.5h1.75v-2h-8a1 1 0 0 0-.714 1.7.75.75 0 1 1-1.072 1.05A2.495 2.495 0 0 1 2 11.5Zm10.5-1h-8a1 1 0 0 0-1 1v6.708A2.486 2.486 0 0 1 4.5 9h8Z"/></svg>
+          Data-Structures-Algorithms
+        </span>
+        <p class="repo-desc">C++ implementations of data structures and algorithms from UC Riverside coursework.</p>
+        <div class="repo-footer">
+          <span class="repo-lang"><span class="lang-dot" style="background:#f34b7d;"></span>C++</span>
+        </div>
+      </a>
+
+      <a href="https://github.com/Ulrixon/Machine-learning-class-practice" target="_blank" class="repo-card">
+        <span class="repo-name">
+          <svg width="13" height="13" viewBox="0 0 16 16" fill="currentColor"><path d="M2 2.5A2.5 2.5 0 0 1 4.5 0h8.75a.75.75 0 0 1 .75.75v12.5a.75.75 0 0 1-.75.75h-2.5a.75.75 0 0 1 0-1.5h1.75v-2h-8a1 1 0 0 0-.714 1.7.75.75 0 1 1-1.072 1.05A2.495 2.495 0 0 1 2 11.5Zm10.5-1h-8a1 1 0 0 0-1 1v6.708A2.486 2.486 0 0 1 4.5 9h8Z"/></svg>
+          ML-class-practice
+        </span>
+        <p class="repo-desc">Machine learning coursework notebooks covering supervised learning, regression, and model evaluation techniques.</p>
+        <div class="repo-footer">
+          <span class="repo-lang"><span class="lang-dot" style="background:#3572A5;"></span>Python</span>
+        </div>
+      </a>
+
+    </div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer>
+  <p>© 2026 Cheng-Shun (Ryan) Chuang · <a href="index.html" style="color:var(--accent);text-decoration:none;">← Back to Home</a> · <a href="https://github.com/Ulrixon/Ulrixon.github.io" target="_blank" style="color:var(--accent);text-decoration:none;">Source on GitHub</a></p>
+</footer>
+
+</body>
+</html>

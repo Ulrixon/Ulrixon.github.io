@@ -3,7 +3,7 @@
 \documentclass[10pt,letterpaper]{article}
 
 %% ── Packages ─────────────────────────────────────────────────────────────────
-\usepackage[margin=0.55in, top=0.45in, bottom=0.45in]{geometry}
+\usepackage[margin=0.52in, top=0.42in, bottom=0.42in]{geometry}
 \usepackage[hidelinks]{hyperref}
 \usepackage{enumitem}
 \usepackage{titlesec}
@@ -24,14 +24,16 @@
 \pagestyle{empty}
 \setlength{\parindent}{0pt}
 \setlength{\parskip}{0pt}
-\setstretch{1.0}
+\setstretch{0.98}
+\setlength{\emergencystretch}{3em}
+\sloppy
 
 %% Section headings
 \titleformat{\section}
   {\normalsize\bfseries\color{accent}}
   {}{0em}{\MakeUppercase}
   [\color{accent}\titlerule]
-\titlespacing{\section}{0pt}{7pt}{3pt}
+\titlespacing{\section}{0pt}{5pt}{2pt}
 
 %% ── Helpers ──────────────────────────────────────────────────────────────────
 \newcommand{\resumeItem}[1]{\item\small #1}
@@ -75,37 +77,30 @@
 \entryHeader{Virginia Tech}{\ ·\ Alexandria, VA, USA}
             {Jan.~2025 -- Jan.~2027 (Expected)}
             {Master of Engineering in Computer Science}
-\begin{itemize}[leftmargin=1.5em, itemsep=1pt, topsep=3pt]
+\begin{itemize}[leftmargin=1.5em, itemsep=0pt, topsep=1pt]
   \resumeItem{GPA: 4.0/4.0}
-  \resumeItem{Completed: Machine Learning, NLP, AI Tools for Software Engineering, Mobile Application Development, Ethics \& Professionalism in CS, Advanced Topics in Data \& Information Systems}
-  \resumeItem{\textit{In Progress (Spr.~2026):} User Interface Software, Advanced Topics in Systems, Verification \& Validation of Scientific Computing, Research \& Thesis}
+  \resumeItem{Relevant coursework: Machine Learning, NLP, AI Tools for Software Engineering, Advanced Topics in Data \& Information Systems, Advanced Topics in Systems, Verification \& Validation of Scientific Computing, Research \& Thesis}
 \end{itemize}
-\vspace{3pt}
+\vspace{1pt}
 
 \entryHeader{National Taipei University (NTPU)}{\ ·\ New Taipei City, Taiwan}
             {Sep.~2019 -- June~2024}
             {Bachelor of Arts in Economics}
-\begin{itemize}[leftmargin=1.5em, itemsep=1pt, topsep=3pt]
+\begin{itemize}[leftmargin=1.5em, itemsep=0pt, topsep=1pt]
   \resumeItem{Overall GPA: 3.95/4.0 \,|\, Last 60 credits: 4.0/4.0 \,|\, CS Courses: 4.0/4.0}
   \resumeItem{Coursework: OS, Databases, ANN \& Deep Learning, Computer Vision}
   \resumeItem{Awards: Academic Excellence (3$\times$), Falcon Award, Dean's Award}
 \end{itemize}
-\vspace{3pt}
-
-\entryHeader{University of California, Riverside}{\ ·\ Riverside, CA, USA}
-            {Sep.~2023 -- Dec.~2023}
-            {Exchange Student — GPA: 4.0/4.0 \,|\, Data Structures \& Algorithms, Discrete Structures, Software Construction}
-
 %% ── Publications ─────────────────────────────────────────────────────────────
 \section{Publications}
 
-\begin{itemize}[leftmargin=1.5em, itemsep=5pt, topsep=3pt]
+\begin{itemize}[leftmargin=1.5em, itemsep=1pt, topsep=1pt]
   \resumeItem{Chuang, C.-S.\ et al.\ \textbf{Impact of Linear Dimensionality Reduction on Machine Learning
     Performance: A Case Study on Fashion-MNIST.}
     \textit{Computing Conference 2026}, In Press.
     [\textit{Main Author}]
-    Benchmarked PCA, LDA, Factor Analysis, and Random Forest feature selection; SVM+PCA achieved
-    top accuracy of 0.8995.}
+    Evaluated how PCA, LDA, Factor Analysis, and Random Forest feature selection affect downstream classifiers;
+    SVM+PCA achieved top accuracy of 0.8995.}
 
   \resumeItem{[Co-Author] \textbf{Design of a Low-Cost, High-Resolution Underwater Acoustic Imager with
     Integrated Deep Learning Enhancement.}
@@ -119,17 +114,18 @@
 
 \entryHeaderSingle{Virginia Tech Transportation Safety Index (VTTSI)}{Sep.~2025 -- Dec.~2025}
                   {Python · Empirical Bayes · MCDM (CRITIC/SAW/EDAS/CODAS) · FastAPI · Streamlit · GCP}
-\begin{itemize}[leftmargin=1.5em, itemsep=1pt, topsep=3pt]
+\begin{itemize}[leftmargin=1.5em, itemsep=0pt, topsep=1pt]
   \resumeItem{Developed a real-time road safety scoring system (0--100) integrating VDOT crash history
     with connected-vehicle telemetry at 15-minute resolution.}
+  \resumeItem{Prepared the system as a demo-paper submission and plan to publish the index formula as an arXiv technical note.}
   \resumeItem{Applied Empirical Bayes crash modeling with uplift factors (speed deficit, VRU conflicts)
     and a CRITIC-weighted hybrid MCDM framework (SAW--EDAS--CODAS) for multi-criteria ranking.}
 \end{itemize}
-\vspace{3pt}
+\vspace{1pt}
 
 \entryHeaderSingle{Taiwanese Car Plate Recognition}{May~2023 -- June~2023}
                   {Python · YOLOv8 · Computer Vision · Object Detection}
-\begin{itemize}[leftmargin=1.5em, itemsep=1pt, topsep=3pt]
+\begin{itemize}[leftmargin=1.5em, itemsep=0pt, topsep=1pt]
   \resumeItem{Trained YOLOv8 models to recognize Taiwanese license plates from moving-vehicle video;
     achieved \textbf{mAP@IoU\,=\,0.5 of 0.986} (detection) and 0.966 (OCR), with zero errors in
     static parking-lot scenarios.}
@@ -138,18 +134,21 @@
 %% ── Experience ───────────────────────────────────────────────────────────────
 \section{Experience}
 
+\entryHeaderSingle{Graduate Research Assistant --- Surgical Video Instance Segmentation}{May~2026 -- Present}
+                  {Virginia Tech}
+\begin{itemize}[leftmargin=1.5em, itemsep=0pt, topsep=1pt]
+  \resumeItem{Conducting ongoing research on YOLO-based instance segmentation for Endoscopic Third Ventriculostomy surgical videos with 11 anatomical/tool classes.}
+  \resumeItem{Benchmarking YOLOv8, YOLO11, YOLO12, and YOLO26 on 15,026 annotated frames from 63 surgeries, targeting real-time inference on Tesla T4 hardware.}
+  \resumeItem{Focusing on model accuracy, throughput, and deployment constraints for safety-critical medical-video analysis.}
+\end{itemize}
+\vspace{1pt}
+
 \entryHeaderSingle{TVBS News --- QA Engineer Intern}{Jan.~2024 -- June~2024}
                   {Taipei, Taiwan}
-\begin{itemize}[leftmargin=1.5em, itemsep=1pt, topsep=3pt]
+\begin{itemize}[leftmargin=1.5em, itemsep=0pt, topsep=1pt]
   \resumeItem{Ensured mobile app quality through systematic bug identification and regression testing.}
   \resumeItem{Built and tested RESTful APIs using MVC architecture, improving data retrieval speed and stability.}
 \end{itemize}
-\vspace{3pt}
-
-\entryHeader{ROC Army --- Military Police}{\ ·\ Taiwan}
-            {Jul.~2024 -- Oct.~2024}
-            {Completed mandatory conscript service; built discipline, adaptability, and cross-functional teamwork.}
-
 %% ── Technical Skills ─────────────────────────────────────────────────────────
 \section{Technical Skills}
 

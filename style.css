@@ -267,6 +267,8 @@ h2.section-title::after {
 .pub-card:hover { border-color: var(--accent); }
 .pub-title { font-weight: 600; font-size: .98rem; margin-bottom: .3rem; }
 .pub-meta { color: var(--muted); font-size: .83rem; margin-bottom: .5rem; font-family: 'JetBrains Mono', monospace; }
+.pub-meta a { color: var(--accent); text-decoration: none; }
+.pub-meta a:hover { text-decoration: underline; }
 .pub-desc { color: var(--muted); font-size: .88rem; }
 .pub-badge {
   display: inline-block;

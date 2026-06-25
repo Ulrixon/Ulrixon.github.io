@@ -3,18 +3,20 @@
 \documentclass[10pt,letterpaper]{article}
 
 %% ── Packages ─────────────────────────────────────────────────────────────────
-\usepackage[margin=0.52in, top=0.42in, bottom=0.42in]{geometry}
+\usepackage[margin=0.50in, top=0.36in, bottom=0.36in]{geometry}
 \usepackage[hidelinks]{hyperref}
 \usepackage{enumitem}
 \usepackage{titlesec}
 \usepackage{xcolor}
-\usepackage{fontenc}
-\usepackage{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage[utf8]{inputenc}
 \usepackage{microtype}
 \usepackage{parskip}
 \usepackage{tabularx}
 \usepackage{array}
 \usepackage{setspace}
+\input{glyphtounicode}
+\pdfgentounicode=1
 
 %% ── Colors ───────────────────────────────────────────────────────────────────
 \definecolor{accent}{HTML}{2563EB}
@@ -24,7 +26,7 @@
 \pagestyle{empty}
 \setlength{\parindent}{0pt}
 \setlength{\parskip}{0pt}
-\setstretch{0.98}
+\setstretch{0.96}
 \setlength{\emergencystretch}{3em}
 \sloppy
 
@@ -33,26 +35,24 @@
   {\normalsize\bfseries\color{accent}}
   {}{0em}{\MakeUppercase}
   [\color{accent}\titlerule]
-\titlespacing{\section}{0pt}{5pt}{2pt}
+\titlespacing{\section}{0pt}{4pt}{1pt}
 
 %% ── Helpers ──────────────────────────────────────────────────────────────────
 \newcommand{\resumeItem}[1]{\item\small #1}
 
 \newcommand{\entryHeader}[4]{%
-  \begin{tabularx}{\linewidth}{@{}Xr@{}}
-    \textbf{#1} \textit{\small\color{muted}#2} & \textit{\small\color{muted}#3} \\
-    \multicolumn{2}{@{}l@{}}{\small #4}
-  \end{tabularx}
+  \noindent\textbf{#1} \textit{\small\color{muted}#2}\hfill \textit{\small\color{muted}#3}\\
+  {\small #4}
   \vspace{1pt}
 }
 
 \newcommand{\entryHeaderSingle}[3]{%
-  \begin{tabularx}{\linewidth}{@{}Xr@{}}
-    \textbf{#1} & \textit{\small\color{muted}#2} \\
-    \multicolumn{2}{@{}l@{}}{\small\textit{\color{muted}#3}}
-  \end{tabularx}
+  \noindent\textbf{#1}\hfill \textit{\small\color{muted}#2}\\
+  {\small\textit{\color{muted}#3}}
   \vspace{1pt}
 }
+
+\newcommand{\skillLine}[2]{\small\textbf{#1:} #2\\[1pt]}
 
 %% ── Document ─────────────────────────────────────────────────────────────────
 \begin{document}
@@ -70,6 +70,12 @@
   \href{https://github.com/Ulrixon}{github.com/Ulrixon}
 \end{center}
 \vspace{2pt}
+
+%% ── Summary ──────────────────────────────────────────────────────────────────
+\section{Professional Summary}
+
+{\small Computer Science M.Eng.\ student and Graduate Research Assistant focused on health AI, computer vision, full-stack research platforms, and cloud deployment. Experience building research software with React, TypeScript, Python, Flask/FastAPI, PostgreSQL, SQLAlchemy, PyTorch, AWS, GCP, Docker, Terraform, and GitHub Actions.}
+\vspace{1pt}
 
 %% ── Education ────────────────────────────────────────────────────────────────
 \section{Education}
@@ -141,12 +147,12 @@
 %% ── Experience ───────────────────────────────────────────────────────────────
 \section{Experience}
 
-\entryHeaderSingle{Graduate Research Assistant --- Surgical Video Instance Segmentation}{May~2026 -- Present}
+\entryHeaderSingle{Graduate Research Assistant --- ResonaCare Surgical Video Rating Platform}{May~2026 -- Present}
                   {Virginia Tech}
 \begin{itemize}[leftmargin=1.5em, itemsep=0pt, topsep=1pt]
-  \resumeItem{Conducting ongoing research on YOLO-based instance segmentation for Endoscopic Third Ventriculostomy surgical videos with 11 anatomical/tool classes.}
-  \resumeItem{Benchmarking YOLOv8, YOLO11, YOLO12, and YOLO26 on 15,026 annotated frames from 63 surgeries, targeting real-time inference on Tesla T4 hardware.}
-  \resumeItem{Focusing on model accuracy, throughput, and deployment constraints for safety-critical medical-video analysis.}
+  \resumeItem{Building ResonaCare, a React/TypeScript and Flask/PostgreSQL platform for surgical-video rating research with rater, researcher, and admin workflows.}
+  \resumeItem{Implemented assignment-scoped 3--30s segment annotation, six-dimension OSATS category ratings, comment review/invalidation, CSV exports, and consent-gated study-event logging.}
+  \resumeItem{Integrated AWS deployment and AI evidence paths: S3 media upload, Amplify/Lambda/RDS stack, Bedrock voice classification, SageMaker/ResNet-18 frame analysis, and GitHub Actions CD.}
 \end{itemize}
 \vspace{1pt}
 
@@ -159,11 +165,9 @@
 %% ── Technical Skills ─────────────────────────────────────────────────────────
 \section{Technical Skills}
 
-\begin{tabularx}{\linewidth}{@{}>{\bfseries\small}lX@{}}
-  Languages   & \small Python, C++, SQL, JavaScript \\[4pt]
-  ML / DL     & \small PyTorch, TensorFlow, Keras, scikit-learn, YOLOv8, U-Net \\[4pt]
-  Engineering & \small FastAPI, SQLAlchemy, Streamlit, Docker, GCP, GitHub Actions, Linux, WSL2 \\[4pt]
-  Databases   & \small MySQL, PostgreSQL, Cloud SQL \\
-\end{tabularx}
+\skillLine{Languages}{Python, TypeScript, JavaScript, C++, SQL}
+\skillLine{Machine Learning and Deep Learning}{PyTorch, TensorFlow, Keras, scikit-learn, YOLOv8, U-Net, ResNet-18}
+\skillLine{Software Engineering}{React, Flask, FastAPI, SQLAlchemy, Docker, Terraform, GitHub Actions, Linux, WSL2}
+\skillLine{Cloud and Databases}{AWS Amplify, AWS Lambda, Amazon RDS, Amazon S3, Amazon SageMaker, Amazon Bedrock, GCP, PostgreSQL, MySQL, Cloud SQL}
 
 \end{document}

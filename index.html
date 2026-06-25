@@ -6,7 +6,7 @@
   <title>Cheng-Shun (Ryan) Chuang</title>
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&amp;family=JetBrains+Mono:wght@400;500&amp;display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="style.css" />
 
 </head>
@@ -48,7 +48,7 @@
         <p class="hero-greeting">// Hi there, I'm</p>
         <h1 class="hero-name">Cheng-Shun <span>(Ryan)</span> Chuang</h1>
         <p class="hero-tagline">
-          MEng Computer Science @ Virginia Tech · AI/ML Researcher · Computer Vision &amp; Systems Engineer
+          MEng Computer Science @ Virginia Tech · AI/ML Researcher · Health AI, Computer Vision &amp; Cloud Systems Engineer
         </p>
         <div class="hero-links">
           <a href="resume.pdf" class="btn btn-primary" target="_blank">
@@ -92,9 +92,9 @@
         <div class="highlight-label">Publications (arXiv, IEEE &amp; Computing Conference)</div>
       </div>
       <div class="highlight-card">
-        <div class="highlight-icon">🏆</div>
-        <div class="highlight-stat">0.986</div>
-        <div class="highlight-label">mAP@0.5 — Car Plate Recognition</div>
+        <div class="highlight-icon">🩺</div>
+        <div class="highlight-stat">3 Roles</div>
+        <div class="highlight-label">ResonaCare rater, researcher &amp; admin workflows</div>
       </div>
       <div class="highlight-card">
         <div class="highlight-icon">⭐</div>
@@ -110,7 +110,7 @@
   <div class="container">
     <h2 class="section-title">About Me</h2>
     <p style="color:var(--muted);max-width:680px;margin-bottom:2rem;font-size:.95rem;">
-      I'm a graduate student in Computer Science at Virginia Tech with a strong background in AI/ML, computer vision, and systems programming. My research spans from deep-learning-based image enhancement for underwater acoustic imagers to real-time transportation safety scoring systems. I'm passionate about building systems that bridge rigorous research and practical engineering.
+      I'm a graduate student in Computer Science at Virginia Tech with a strong background in AI/ML, computer vision, and systems programming. My current RA work is ResonaCare, a surgical video rating research platform combining React/TypeScript, Flask/PostgreSQL, role-based study workflows, AWS deployment, and AI-assisted evidence. My broader research spans deep-learning-based imaging, transportation safety, and practical systems that connect rigorous research with production engineering.
     </p>
     <div class="about-grid">
       <div>
@@ -232,17 +232,17 @@
 
     <div class="exp-item" style="border-left:2px solid var(--accent);padding-left:1rem;border-radius:0 var(--radius) var(--radius) 0;background:rgba(88,166,255,.04);">
       <div class="exp-header">
-        <span class="exp-role">Graduate Research Assistant (GRA)</span>
-        <span class="exp-date">May 2026 – Aug 2026</span>
+        <span class="exp-role">Graduate Research Assistant — ResonaCare</span>
+        <span class="exp-date">May 2026 – Present</span>
       </div>
       <p class="exp-company" style="display:flex;align-items:center;gap:.5rem;">
         Virginia Tech · Alexandria, VA, USA
         <span class="pub-badge pub-badge-blue" style="margin-bottom:0;">Now</span>
       </p>
       <ul class="exp-bullets">
-        <li>Developing YOLO-based instance segmentation models for Endoscopic Third Ventriculostomy (ETV) surgical videos to automate intraoperative identification of anatomical structures and surgical instruments across 11 classes.</li>
-        <li>Benchmarking nano and medium YOLO variants (YOLOv8, YOLO11, YOLOv12, YOLO26) under a rigorous surgery-level 5-fold cross-validation protocol on 15,026 annotated frames from 63 ETV surgical procedures.</li>
-        <li>Evaluating real-time deployment feasibility on GPU hardware, demonstrating 59–86 FPS throughput on an NVIDIA Tesla T4 GPU for potential intraoperative assistance systems.</li>
+        <li>Building ResonaCare, a surgical video rating platform for standardized OSATS-style assessment with React/TypeScript rater workflows, video queues, 3–30 second segment annotation, coverage tracking, interval comments, and six-dimension category ratings.</li>
+        <li>Developed Flask/SQLAlchemy/PostgreSQL APIs with assignment-scoped access control for rater, researcher, and admin roles, including researcher review/invalidation, CSV exports, audit logs, and consent-gated study event analytics.</li>
+        <li>Integrated AWS and AI services: S3 presigned video uploads, Amplify frontend, Lambda container backend, RDS PostgreSQL, Bedrock voice classification, SageMaker/ResNet-18 frame analysis, model provenance/lock views, and GitHub Actions CD.</li>
       </ul>
     </div>
 
@@ -282,6 +282,7 @@
         <span class="skill-label">Languages</span>
         <div class="tags">
           <span class="tag">Python</span>
+          <span class="tag">TypeScript</span>
           <span class="tag">C++</span>
           <span class="tag">SQL</span>
           <span class="tag">JavaScript</span>
@@ -296,6 +297,7 @@
           <span class="tag">Keras</span>
           <span class="tag">scikit-learn</span>
           <span class="tag">YOLOv8</span>
+          <span class="tag">ResNet-18</span>
           <span class="tag">U-Net</span>
         </div>
       </div>
@@ -303,6 +305,8 @@
       <div class="skill-row">
         <span class="skill-label">Frameworks &amp; APIs</span>
         <div class="tags">
+          <span class="tag">React</span>
+          <span class="tag">Flask</span>
           <span class="tag">FastAPI</span>
           <span class="tag">SQLAlchemy</span>
           <span class="tag">Streamlit</span>
@@ -316,6 +320,12 @@
           <span class="tag">GitHub Actions</span>
           <span class="tag">CI/CD</span>
           <span class="tag">Docker</span>
+          <span class="tag">AWS</span>
+          <span class="tag">Terraform</span>
+          <span class="tag">S3</span>
+          <span class="tag">Lambda</span>
+          <span class="tag">SageMaker</span>
+          <span class="tag">Bedrock</span>
           <span class="tag">GCP</span>
           <span class="tag">Linux</span>
           <span class="tag">WSL2</span>
